@@ -1,0 +1,17 @@
+{
+    "blocks": {},
+    "path": {
+        "src": {
+            "srcPath": "./src",
+            "blocksDirName": "/blocks",
+            "html": [
+              "/pages/**/*.pug"
+            ]
+        },
+        "dist": {
+            "distPath": "./dist",
+            "html": "/"
+        },
+        "watch": {}
+    }
+}
