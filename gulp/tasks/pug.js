@@ -9,4 +9,14 @@ module.exports = function () {
 		  .pipe($.gulp.dest($.path.dist.html))
 		  .on('end', $.browserSync.reload);
 	});
+
+	$.gulp.task('pugFast', function () {
+		return $.gulp.src($.path.src.html, { since: $.gulp.lastRun('pug')})
+	  	.pipe($.gp.pug({ pretty: true }))
+	  	.on('error', $.gp.notify.onError({
+          title: 'Pug'
+			}))
+		  .pipe($.gulp.dest($.path.dist.html))
+		  .on('end', $.browserSync.reload);
+	});
 }
