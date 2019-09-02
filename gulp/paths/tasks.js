@@ -14,5 +14,6 @@
 module.exports = [
     './gulp/tasks/serve',
     './gulp/tasks/watch',
-    './gulp/tasks/pug'
+    './gulp/tasks/pug',
+    './gulp/tasks/scss',
 ]

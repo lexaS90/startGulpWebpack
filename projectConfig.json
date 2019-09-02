@@ -6,11 +6,15 @@
             "blocksDirName": "/blocks",
             "html": [
               "/pages/**/*.pug"
+            ],
+            "style": [
+                "/style/app.scss"
             ]
         },
         "dist": {
             "distPath": "./dist",
-            "html": "/"
+            "html": "/",
+            "style": "/assets/css/"
         },
         "watch": {}
     }
