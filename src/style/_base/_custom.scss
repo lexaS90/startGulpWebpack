@@ -1,0 +1,11 @@
+.adv-list{
+    @include wrapper();
+}
+
+.adv-list__row{
+    @include row();
+}
+
+.adv-list__item{
+    @include col(3);    
+}

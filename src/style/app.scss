@@ -1,7 +1,11 @@
-body{
-    background-color: green;
-}
+@import "_tools/variables";
+@import "_tools/mixins";
+@import "_tools/custom-grid";
 
-.o{
-    display: flex;
-}
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+
+
+@import "_base/default";
+@import "_base/fonts";
+@import "_base/custom";
