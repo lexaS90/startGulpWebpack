@@ -7,5 +7,15 @@
 }
 
 .adv-list__item{
-    @include col(3);    
+    @include col(3);
+    @include col(6, lg);
+    @include col(12, xs);
+}
+
+.item{
+    border: 1px solid red;
+}
+
+label:focus-within{
+    border: 1px solid red;
 }
