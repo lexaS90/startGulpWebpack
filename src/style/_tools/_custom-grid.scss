@@ -3,7 +3,7 @@
     @include make-container-max-widths();
 
     @each $breakpoint, $gutter in $offset-widths{
-        @include media-breakpoint-down($breakpoint) {
+        @include media-breakpoint-up($breakpoint) {
             padding-right: $gutter / 2;
             padding-left: $gutter / 2;
         }
@@ -14,7 +14,7 @@
     @include make-container();
 
     @each $breakpoint, $gutter in $offset-widths{
-        @include media-breakpoint-down($breakpoint) {
+        @include media-breakpoint-up($breakpoint) {
             padding-right: $gutter / 2;
             padding-left: $gutter / 2;
         }
@@ -25,7 +25,7 @@
     @include make-row();
 
     @each $breakpoint, $gutter in $offset-widths{
-        @include media-breakpoint-down($breakpoint) {
+        @include media-breakpoint-up($breakpoint) {
             margin-right: -$gutter / 2;
             margin-left: -$gutter / 2;
         }
@@ -38,14 +38,14 @@
         @include make-col($size);
 
         @each $breakpoint, $gutter in $offset-widths{
-            @include media-breakpoint-down($breakpoint) {
+            @include media-breakpoint-up($breakpoint) {
                 padding-right: $gutter / 2;
                 padding-left: $gutter / 2;
             }
         }
     }
     @else{
-        @include media-breakpoint-down($breakpoint){
+        @include media-breakpoint-up($breakpoint){
             @include make-col($size);
         }
     }
@@ -56,7 +56,7 @@
         @include make-col-offset($size);
     }
     @else{
-        @include media-breakpoint-down($breakpoint){
+        @include media-breakpoint-up($breakpoint){
             @include make-col-offset($size);
         }
     }

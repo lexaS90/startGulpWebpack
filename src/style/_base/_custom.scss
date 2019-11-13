@@ -7,9 +7,12 @@
 }
 
 .adv-list__item{
-    @include col(3);
-    @include col(6, lg);
-    @include col(12, xs);
+		@include col(6);	
+		@include col(5, lg);	
+}
+
+.adv-list__item:first-child{
+	@include offset(1, lg);
 }
 
 .item{
