@@ -1,3 +1,11 @@
+/**
+	@include wrapper();
+	@include row();
+	@include col(6);
+	@include col(5, lg);
+	@include offset(1, lg);
+*/
+
 @mixin wrapper(){
     @include make-container();
     @include make-container-max-widths();

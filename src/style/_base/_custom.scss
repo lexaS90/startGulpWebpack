@@ -1,24 +1,33 @@
-.adv-list{
-    @include wrapper();
+.article-list{
+	@include wrapper();
 }
 
-.adv-list__row{
-    @include row();
+.article-list__wrap{
+	@include row();
 }
 
-.adv-list__item{
-		@include col(6);	
-		@include col(5, lg);	
+.article-list__col{
+	@include col(6);
 }
 
-.adv-list__item:first-child{
-	@include offset(1, lg);
+.article-list__item{
+
 }
 
-.item{
-    border: 1px solid red;
+.article-list__item-title{
+
 }
 
-label:focus-within{
-    border: 1px solid red;
+.article-list__item-images{
+	height: 300px;
+	overflow: hidden;
+	img{
+		display: block;
+		width: 100%;
+		max-height: 300px;
+	}
+}
+
+.article-list__item-text{
+
 }

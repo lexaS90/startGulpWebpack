@@ -11,7 +11,11 @@ global.$ = {
     gulp: require('gulp'),
     gp: require('gulp-load-plugins')(),
     browserSync: require('browser-sync').create(),
-    gcmq: require('gulp-group-css-media-queries'),
+		gcmq: require('gulp-group-css-media-queries'),
+		webpackStream: require('webpack-stream'),
+		webpack: require('webpack'),
+		pngquant: require('imagemin-pngquant'),
+		del: require('del'),
 }
 
 /**
@@ -43,6 +47,33 @@ $.path.watch.style = [
 ];
 
 /**
+ * Настройка путей для js
+ */
+$.path.src.script[0] = $.path.src.srcPath + $.path.src.script[0];
+$.path.dist.script = $.path.dist.distPath + $.path.dist.script;
+$.path.watch.script = [
+	$.path.src.script[0].replace( $.path.src.script[0].split('/').pop(), '**/*.js' ),
+];
+
+/**
+ * Настройка путей для изображений
+ */
+$.path.src.image[0] = $.path.src.srcPath + $.path.src.image[0];
+$.path.dist.image = $.path.dist.distPath + $.path.dist.image;
+$.path.watch.image = [
+	$.path.src.image[0]
+];
+
+/**
+ * Настройка путей для шрифтов
+ */
+$.path.src.font[0] = $.path.src.srcPath + $.path.src.font[0];
+$.path.dist.font = $.path.dist.distPath + $.path.dist.font;
+$.path.watch.font = [
+	$.path.src.font[0]
+];
+
+/**
  * Подключение тасков
  */
 $.path.task = require('./gulp/paths/tasks.js');
@@ -50,17 +81,21 @@ $.path.task.forEach(function(taskPath) {
     require(taskPath)();
 });
 
-
-
 /**
  * Запуск тасков
  */
 
 $.gulp.task('default', $.gulp.series(
    	
-    $.gulp.parallel(
+		$.gulp.parallel(
+			'clean',
+		),
+		$.gulp.parallel(
         'scss',
-        'pug'
+				'pug',
+				'script',
+				'image',
+				'font'
     ), 
     $.gulp.parallel(
         'watch',
