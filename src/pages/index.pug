@@ -78,3 +78,12 @@ block content
 					.article-list__item-text
 						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque neque labore vel reprehenderit! Ex laborum dicta culpa accusantium, corrupti provident praesentium, repellendus porro dolore iure, quos doloremque tempore amet eveniet!
 						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque neque labore vel reprehenderit! Ex laborum dicta culpa accusantium, corrupti provident praesentium, repellendus porro dolore iure, quos doloremque tempore amet eveniet!
+
+
+	section.callBack
+		form.callBack__form(action="")#call
+			.form-group
+				input(type="text", name="name", required, autocomplete="off").form-control
+			.form-group
+				input(type="text", name="phone", required, data-role="phone", autocomplete="off").form-control
+			button(type="submit").btn.btn-primary Отправить

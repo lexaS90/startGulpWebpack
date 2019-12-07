@@ -38,7 +38,9 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1"
+    "bootstrap": "^4.3.1",
+    "inputmask": "^5.0.0",
+    "pristinejs": "^0.1.6"
   },
   "browserslist": [
     "> 1%",
